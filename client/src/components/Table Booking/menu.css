@@ -1,0 +1,59 @@
+.button1 {
+   
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+
+    
+  }
+  
+  .button1 {
+    background-color: white;; 
+    color:#f44336 ;
+    
+    border: 2px solid #f44336;
+  }
+  
+  .button1:hover {
+    background-color: #f44336;
+    color: white;
+   
+  }
+
+
+
+
+  /* forms */
+
+
+  .formw{
+        
+    border-radius:  20px ;
+    width: 800px;
+    max-width: 100%;
+    padding:50px;
+    padding-top: 30px;
+    margin-top: 10px;
+   
+background-color: rgba(240, 240, 240, 0.911);
+
+  }
+  .one{
+	
+    background-position: center;
+   
+    background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	
+	margin-bottom:50px;
+	
+}
+  
+

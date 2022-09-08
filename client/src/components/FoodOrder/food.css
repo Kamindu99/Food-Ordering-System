@@ -1,0 +1,151 @@
+
+  /*Food*/
+    /*  Helper Styles */
+    .bodyplant {
+        font-family: Varela Round;
+        background: #f1f1f1;
+    }
+  
+    .planta {
+        text-decoration: none;
+    }
+  
+    /* Cardf Styles */
+  
+    .cardf-sl {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .cardf-image img {
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 8px 8px 0px 0;
+    }
+  
+    .cardf-action {
+        position: relative;
+        float: right;
+        margin-top: -25px;
+        margin-right: 20px;
+        z-index: 2;
+        color: #E26D5C;
+        background: #fff;
+        border-radius: 100%;
+        padding: 15px;
+        font-size: 15px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .cardf-action:hover {
+        color: #fff;
+        background: #E26D5C;
+    }
+  
+    .cardf-heading {
+        font-size: 18px;
+        font-weight: bold;
+        background: #fff;
+        padding: 10px 15px;
+    }
+  
+    .cardf-text {
+        padding: 10px 15px;
+        background: #fff;
+        font-size: 14px;
+        color: #636262;
+    }
+  
+    .cardf-button {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #c23b3b;
+        color: #fff;
+        border-radius: 0 0 8px 8px;
+    }
+  
+    .cardf-button:hover {
+        text-decoration: none;
+        background-color: #d82424;
+        color: #fff;
+  
+    }
+  
+  
+  .cardsh{
+    box-shadow: 2px 2px 10px 1px rgb(0 0 0 / 0.3);
+  }
+  
+  .cardsh:hover{
+    box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 0.6);
+    zoom: 1.0017;
+  }
+  
+  
+  
+  
+    /*oder food*/
+  
+    .payicons {
+      margin-left: auto
+  }
+  
+  .lefta {
+      background-color: #ffffff;
+      padding: 3vh
+  }
+  
+  .lefta img {
+      width: 2rem
+  }
+  
+  
+  .righta .item {
+      padding: 1.5rem 0
+  }
+  
+  .righta {
+      background-color: #ffffff;
+      padding: 2vh
+  }
+  
+  
+  .lower {
+      line-height: 2
+  }
+  
+  #cvv {
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0.575), rgba(255, 255, 255, 0.541)), url("https://img.icons8.com/material-outlined/24/000000/help.png");
+      background-repeat: no-repeat;
+      background-position-x: 95%;
+      background-position-y: center
+  }
+  
+
+
+
+  /*Add Food*/
+
+  .addfood {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #4f7fce;
+    color: #fff;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.addfood:hover {
+    text-decoration: none;
+    background-color: #234c8f;
+    color: #fff;
+
+}
+
+  
+  
+  

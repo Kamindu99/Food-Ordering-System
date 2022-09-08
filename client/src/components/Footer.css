@@ -1,0 +1,106 @@
+
+  
+  /*footer*/
+  .mainfooter {
+    color: white;
+    background-color:#212121;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    
+    min-height: 120px;
+    
+  }
+  .ftr {
+    margin-inline-start: 13%;
+  }
+  
+  .ftr li {
+    color: rgb(138, 138, 138);
+  }
+  .abcs li a {
+    text-decoration: none;
+    color: rgb(138, 138, 138);
+  }
+  
+  .abcs li a:hover {
+    color: rgb(255, 246, 246);
+    font-size: 17px;
+  }
+  .down {
+    margin-inline-start: 25%;
+  }
+  .down .socl {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .down .socl a {
+    display: block;
+    width: 40px;
+    background: #594f8d;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0 5px;
+    color: #adadad;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+
+
+  
+  
+  
+  
+  /*fotter models*/
+  
+  .ftmodal-body {
+    background-color:hsl(240,100%,35%,0.5)	;
+    border-color: #5165ff
+  }
+  
+  .ftintro-1 {
+    font-size: 20px
+  }
+  
+  .ftclose {
+    color: #fff
+  }
+  
+  .ftclose:hover {
+    color: #fff
+  }
+  
+  
+  .ftbtn-primary {
+    color: #5165ff;
+    background-color: #fffaff;
+    border-color: #fffaff;
+    padding: 12px;
+    font-weight: 700;
+    border-radius: 41px;
+    padding-right: 20px;
+    padding-left: 20px
+  }
+  
+  .gg li{
+    cursor: pointer;
+  }
+  .gg li:hover{
+    color: rgb(163, 185, 231);
+    font-size: 17px;
+  }
+  
+  .servicetext a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .custom-fade .modal-dialog {
+      transform: translateY(-10%);
+      transition: all .2s ease-out;
+  }
