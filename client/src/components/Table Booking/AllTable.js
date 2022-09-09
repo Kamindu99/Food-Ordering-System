@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
 
 function AllTable() {
-    const [tables, setTables] = useState();
-    const [searchkey, setsearchkey] = useState('');
+    const [tables, setTables] = useState([]);
+    // const [searchkey, setsearchkey] = useState('');
   
 
 
@@ -15,7 +15,7 @@ function AllTable() {
                console.log(res.data)
 
                
-           })
+           }).catch((error) => console.log(error));
 
 
        },[])
@@ -40,25 +40,29 @@ function AllTable() {
 
     }
 
-    const filterPackages = async (e) => {
-        console.log(searchkey)
+    // const filterPackages = async (e) => {
+    //     console.log(searchkey)
 
-        const response = await axios.get(
-            'http://localhost:5000/table/'
-          );
-        const  filteredPackages = response.data.filter((tables) =>
-          tables.name.toLowerCase().includes(searchkey)
-          );
-          if (filteredPackages.length > 0) {
-            setTables(filteredPackages);
-          }
-            else{
-                alert("Search Not Found")
-            }
+    //     const response = await axios.get(
+    //         'http://localhost:5000/table/'
+    //       );
+    //     const  filteredPackages = response.data.filter((tables) =>
+    //       tables.name.toLowerCase().includes(searchkey)
+    //       );
+    //       if (filteredPackages.length > 0) {
+    //         setTables(filteredPackages);
+    //       }
+    //         else{
+    //             alert("Search Not Found")
+    //         }
 
 
-    }
-
+    // }
+    const [search, setSearch] = useState("");
+    const filterdActivity = tables.filter((post) => {
+        return post.name.toLowerCase().includes(search);
+      });
+    
 
 
   return (
@@ -69,11 +73,11 @@ function AllTable() {
 
     <div  className="row mb-2">
 
-<input type="text" className="form-control col-4 mt-1"  onChange={(e) => {setsearchkey(e.target.value)} }
+<input type="search" className="form-control col-4 mt-1" onChange={(e) => setSearch(e.target.value) }
                  placeholder="Search Tables"   style={{ width: "200px", borderRadius: "10px"}} />
                 <div className="col-6 col-md-4">
                  <button className="btn btn-secondary mt-1" style={{marginLeft: "1px"}}
-                 onClick={()=>filterPackages(searchkey)}>Search</button>
+                >Search</button>
                 
                  </div>
                  <div className="col-6 col-md-4">
@@ -101,7 +105,8 @@ function AllTable() {
 
                 </thead>
                 <tbody>
-                    {tables && tables.map((table , index) => (
+                {filterdActivity.map((table, index) => (
+                 
                         <tr key={table.id} >
                             <td>{index+1}</td>
 
