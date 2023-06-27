@@ -1,26 +1,14 @@
 const express = require('express');
 const Food = require('../models/FoodModel');
-const multer = require("multer")
 const router =express.Router();
 
-const storage=multer.diskStorage({
-    destination:(req,file,callback)=>{
-        callback(null,"../client/public/uploads");
-    },
-    filename:(req,file,callback)=>{
-        callback(null,file.originalname);
-    }
-})
 
-const upload=multer({storage:storage});
-
-
-router.post('/admin/add', upload.single("foodImage") ,(req,res)=>{
+router.post('/admin/add' ,(req,res)=>{
     const newFood=new Food({
         foodName:req.body.foodName,
         description:req.body.description,
         price:req.body.price,
-        foodImage:req.file.originalname,
+        foodImage:req.body.foodImage,
     });
     newFood
     .save()
@@ -56,13 +44,13 @@ router.get('/:id',(req,res)=>{
     });
 });
 
-router.put('/admin/update/:id' , upload.single("foodImage"),(req,res)=>{
+router.put('/admin/update/:id' ,(req,res)=>{
     Food.findByIdAndUpdate(req.params.id)
     .then((food )=> {
         food.foodName=req.body.foodName;
         food.description=req.body.description;
         food.price=req.body.price;
-        
+        food.foodImage=req.body.foodImage;
 
         food
             .save()
