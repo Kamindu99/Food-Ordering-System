@@ -58,7 +58,7 @@ const EditFood = (props) => {
           setName(res.data.food.foodName),
           setPrice(res.data.food.price),
           setDescription(res.data.food.description),
-          setFileName(res.data.food.foodImage)
+          setFoodImage(res.data.food.foodImage)
 
         ])
       .catch((error) => console.log(error));
