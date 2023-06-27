@@ -49,7 +49,7 @@ const Restration = (props) => {
     const abc = { token: result };
 
     axios
-      .post("http://localhost:5000/register/view", abc)
+      .post("https://foodordersystm.onrender.com/register/view", abc)
       .then(res => [
         setUserid(res.data.userId)
 
@@ -60,7 +60,7 @@ const Restration = (props) => {
 
 
 
-    axios.get(`http://localhost:5000/food/${id}`).then(res => [
+    axios.get(`https://foodordersystm.onrender.com/food/${id}`).then(res => [
 
       setFoodname(res.data.food.foodName),
       setQuantity(1),
@@ -105,7 +105,7 @@ const Restration = (props) => {
         userid
       };
 
-      await axios.post("http://localhost:5000/foodorder/add", foodOrder)
+      await axios.post("https://foodordersystm.onrender.com/foodorder/add", foodOrder)
         .then((res) => {
           setShow(true);
           setTimeout(() => {
@@ -180,7 +180,7 @@ const Restration = (props) => {
                   <hr class="text-center mb-2" />
                   <h4 style={{ color: "hsl(0,0%,0%,0.6)" }}>{foodname}</h4>
                   <div >
-                    <div class="col-12 "><img class="img-fluid" src={`/uploads/${foodImage}`} style={{ height: "170px", width: "290px", marginLeft: "70px" }} /></div>
+                    <div class="col-12 "><img class="img-fluid" src={`${foodImage}`} style={{ height: "170px", width: "290px", marginLeft: "70px" }} /></div>
 
                   </div>
 

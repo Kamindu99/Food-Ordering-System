@@ -37,7 +37,7 @@ import {Link } from "react-router-dom";
         const abc = {token:result}
         
         
-        axios.post('http://localhost:5000/register/view', abc).then(res=>{
+        axios.post('https://foodordersystm.onrender.com/register/view', abc).then(res=>{
            
             
                 setName(res.data.name)

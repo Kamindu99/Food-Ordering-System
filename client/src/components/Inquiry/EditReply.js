@@ -10,7 +10,7 @@ function EditReply() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/inquiry/${id}`).then((res) => {
+        axios.get(`https://foodordersystm.onrender.com/inquiry/${id}`).then((res) => {
             setAdReply(res.data.adreply)
         })
 
@@ -22,7 +22,7 @@ function EditReply() {
         const inquirys = {
             adreply
         }
-        axios.put(`http://localhost:5000/inquiry/${id}`, inquirys)
+        axios.put(`https://foodordersystm.onrender.com/inquiry/${id}`, inquirys)
         alert("Response Updated Successfully")
         window.location.href = ('/adminallreply')
     }

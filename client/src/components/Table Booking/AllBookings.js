@@ -15,7 +15,7 @@ function AllBookings() {
 
 
     useEffect(() => {
-           axios.get('http://localhost:5000/tablebooking/').then(res => {
+           axios.get('https://foodordersystm.onrender.com/tablebooking/').then(res => {
             setBookings(res.data)
                console.log(res.data)
 
@@ -30,11 +30,11 @@ function AllBookings() {
 
         const tableId = e.target.id;
 
-        axios.delete(`http://localhost:5000/tablebooking/${tableId}`).then((res) => {
+        axios.delete(`https://foodordersystm.onrender.com/tablebooking/${tableId}`).then((res) => {
             console.log(res.data)
             alert('Booking Deleted')
 
-            axios.get('http://localhost:5000/tablebooking/').then(res => {
+            axios.get('https://foodordersystm.onrender.com/tablebooking/').then(res => {
                 setBookings(res.data)
             console.log(res.data)
         })
@@ -49,7 +49,7 @@ function AllBookings() {
         console.log(searchkey)
 
         const response = await axios.get(
-            'http://localhost:5000/tablebooking/'
+            'https://foodordersystm.onrender.com/tablebooking/'
           );
         const  filteredPackages = response.data.filter((bookings) =>
         bookings.name.toLowerCase().includes(searchkey)

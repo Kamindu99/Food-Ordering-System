@@ -55,7 +55,7 @@ function Register() {
             return false;
         }
     
-        axios.post('http://localhost:5000/register/reg', newUser).then((res)=>{
+        axios.post('https://foodordersystm.onrender.com/register/reg', newUser).then((res)=>{
             console.log(res.data)
             alert("Registration Success")
             window.location.replace("/login")

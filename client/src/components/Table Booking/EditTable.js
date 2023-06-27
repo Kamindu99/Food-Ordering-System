@@ -12,7 +12,7 @@ function EditTable() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/table/${id}`).then((res) => {
+        axios.get(`https://foodordersystm.onrender.com/table/${id}`).then((res) => {
             console.log(res.data)
             setName(res.data.name)
             setDescription(res.data.description)
@@ -31,7 +31,7 @@ function EditTable() {
             users,
             image
         }
-        axios.put(`http://localhost:5000/table/${id}`, table)
+        axios.put(`https://foodordersystm.onrender.com/table/${id}`, table)
         alert("Data Updated successfully")
         window.location.href=('/alltable')
     }

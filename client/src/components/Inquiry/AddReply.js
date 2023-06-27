@@ -14,7 +14,7 @@ function AddReply() {
     const [adreply, setAdreply] = useState('');
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/inquiry/${id}`).then((res) => {
+        axios.get(`https://foodordersystm.onrender.com/inquiry/${id}`).then((res) => {
             console.log(res.data)
             setName(res.data.name)
             setPhone(res.data.phone)
@@ -35,7 +35,7 @@ function AddReply() {
             inq,
             adreply
         }
-        axios.put(`http://localhost:5000/inquiry/${id}`, userinquiry)
+        axios.put(`https://foodordersystm.onrender.com/inquiry/${id}`, userinquiry)
         alert("Response Sent Successfully")
         window.location.href = ('/allinquiry')
     }

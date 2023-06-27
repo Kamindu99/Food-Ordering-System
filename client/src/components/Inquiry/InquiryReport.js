@@ -9,7 +9,7 @@ function InquiryReport() {
     const componentRef = useRef();
     
     useEffect(() => {
-        axios.get('http://localhost:5000/inquiry/').then(res => {
+        axios.get('https://foodordersystm.onrender.com/inquiry/').then(res => {
             setInquiries(res.data)
             console.log(res.data)   
         })

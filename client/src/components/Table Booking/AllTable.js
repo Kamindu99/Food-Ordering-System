@@ -10,7 +10,7 @@ function AllTable() {
 
 
     useEffect(() => {
-           axios.get('http://localhost:5000/table/').then(res => {
+           axios.get('https://foodordersystm.onrender.com/table/').then(res => {
                setTables(res.data)
                console.log(res.data)
 
@@ -25,11 +25,11 @@ function AllTable() {
 
         const tableId = e.target.id;
 
-        axios.delete(`http://localhost:5000/table/${tableId}`).then((res) => {
+        axios.delete(`https://foodordersystm.onrender.com/table/${tableId}`).then((res) => {
             console.log(res.data)
             alert('Table Deleted')
 
-            axios.get('http://localhost:5000/table/').then(res => {
+            axios.get('https://foodordersystm.onrender.com/table/').then(res => {
             setTables(res.data)
             console.log(res.data)
         })
@@ -44,7 +44,7 @@ function AllTable() {
     //     console.log(searchkey)
 
     //     const response = await axios.get(
-    //         'http://localhost:5000/table/'
+    //         'https://foodordersystm.onrender.com/table/'
     //       );
     //     const  filteredPackages = response.data.filter((tables) =>
     //       tables.name.toLowerCase().includes(searchkey)

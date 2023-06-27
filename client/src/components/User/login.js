@@ -27,7 +27,7 @@ import {Link } from "react-router-dom";
             password
         }
     
-        axios.post('http://localhost:5000/register/login', login).then(res=>{
+        axios.post('https://foodordersystm.onrender.com/register/login', login).then(res=>{
            
                 if(res.data.success){
                     alert("Successfull")

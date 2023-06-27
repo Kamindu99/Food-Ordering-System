@@ -17,7 +17,7 @@ class ComponentToPrint extends React.Component {
 
   retrievePosts() {
     axios
-      .get("http://localhost:5000/foodorder")
+      .get("https://foodordersystm.onrender.com/foodorder")
       .then((res) => {
         if (res.data.success) {
           this.setState({
@@ -29,7 +29,7 @@ class ComponentToPrint extends React.Component {
 
   onDelete = (id) =>{
     
-          axios.delete(`http://localhost:5000/foodorder/admin/delete/${id}`).then((res)=>{
+          axios.delete(`https://foodordersystm.onrender.com/foodorder/admin/delete/${id}`).then((res)=>{
   
           
           window.location.reload()
@@ -41,7 +41,7 @@ class ComponentToPrint extends React.Component {
     const data={
       cmp:true
     }
-     axios.put(`http://localhost:5000/foodorder/admin/update/${id}`, data);
+     axios.put(`https://foodordersystm.onrender.com/foodorder/admin/update/${id}`, data);
     window.location.reload();
       
       }

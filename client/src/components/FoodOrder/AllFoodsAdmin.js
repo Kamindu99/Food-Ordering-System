@@ -16,7 +16,7 @@ export default class AllFoodAdmin extends Component {
       }
     
       retrievefood() {
-        axios.get("http://localhost:5000/food").then((res) => {
+        axios.get("https://foodordersystm.onrender.com/food").then((res) => {
           if (res.data.success) {
             this.setState({
               foods: res.data.existingFood,
@@ -38,7 +38,7 @@ export default class AllFoodAdmin extends Component {
       handleSearchArea = (e) => {
         const searchkey = e.currentTarget.value;
     
-        axios.get("http://localhost:5000/food").then((res) => {
+        axios.get("https://foodordersystm.onrender.com/food").then((res) => {
           if (res.data.success) {
             this.filterData(res.data.existingFood, searchkey);
           }
@@ -48,7 +48,7 @@ export default class AllFoodAdmin extends Component {
 
       onDelete = (id) =>{
         if(window.confirm("Confirm Delete")){
-              axios.delete(`http://localhost:5000/food/admin/delete/${id}`).then((res)=>{
+              axios.delete(`https://foodordersystm.onrender.com/food/admin/delete/${id}`).then((res)=>{
       
               alert("success Deleted");
               this.retrievefood();

@@ -19,14 +19,14 @@ function MyFoodOrders() {
         const abc = {token:result}
         
         
-        axios.post('http://localhost:5000/register/view', abc).then(res=>{
+        axios.post('https://foodordersystm.onrender.com/register/view', abc).then(res=>{
            
             
                 setId(res.data.userId)
                 console.log(res.data.userId)
                 const ids = res.data.userId
         
-        axios.get(`http://localhost:5000/foodorder/book/${ids}`).then(res => {
+        axios.get(`https://foodordersystm.onrender.com/foodorder/book/${ids}`).then(res => {
           
          if(res.data.length != 0){
               setBookings(res.data)
@@ -67,7 +67,7 @@ function MyFoodOrders() {
 
         const orderid = e.target.id;
 
-        axios.delete(`http://localhost:5000/foodorder/admin/delete/${orderid}`).then((res) => {
+        axios.delete(`https://foodordersystm.onrender.com/foodorder/admin/delete/${orderid}`).then((res) => {
             console.log(res.data)
             alert('Order Deleted')
             window.location.reload();
@@ -81,7 +81,7 @@ function MyFoodOrders() {
       const data={
         cmp:true
       }
-       axios.put(`http://localhost:5000/foodorder/admin/update/${id}`, data);
+       axios.put(`https://foodordersystm.onrender.com/foodorder/admin/update/${id}`, data);
       window.location.reload();
         
         }

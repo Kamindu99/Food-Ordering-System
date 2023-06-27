@@ -21,7 +21,7 @@ console.log("useEffect Called")
       const abc = {token:result}
       
       
-      axios.post('http://localhost:5000/register/view', abc).then(res=>{
+      axios.post('https://foodordersystm.onrender.com/register/view', abc).then(res=>{
          
          
               console.log(res.data.userId)

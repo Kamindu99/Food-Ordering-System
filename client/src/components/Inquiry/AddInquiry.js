@@ -25,7 +25,7 @@ function AddInquiry() {
                 inq,
             }
 
-            await axios.post('http://localhost:5000/inquiry/add', newUserInquiry).then((res) => {
+            await axios.post('https://foodordersystm.onrender.com/inquiry/add', newUserInquiry).then((res) => {
                 alert("Inquiry Added Successfully")
                 console.log(res.data)
                 window.location.href = '/allinquiryuser'

@@ -34,7 +34,7 @@ const AddFood = () => {
       }
 
       axios
-        .post("http://localhost:5000/food/admin/add", newFood)
+        .post("https://foodordersystm.onrender.com/food/admin/add", newFood)
         .then(
           (res) => setMessage(res.data))
         .catch((err) => {
@@ -111,17 +111,6 @@ const AddFood = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
                             <div class="form-outline mb-4">
                               <label class="form-label" for="form2Example1">Food Description</label>
                               <textarea type="text" id="form2Example1" class="form-control" placeholder="Enter Description"
@@ -140,11 +129,11 @@ const AddFood = () => {
 
                               <label class="form-label" for="form2Example1">Food Image</label>
                               <div class="mb-3">
-                              <input type="text" id="form2Example1" class="form-control" placeholder="Enter URL"
-                                    name="foodImage"
-                                    value={foodImage}
-                                    onChange={(e) => setFoodImage(e.target.value)}
-                                    required />
+                                <input type="text" id="form2Example1" class="form-control" placeholder="Enter URL"
+                                  name="foodImage"
+                                  value={foodImage}
+                                  onChange={(e) => setFoodImage(e.target.value)}
+                                  required />
                                 <Form.Control.Feedback type="invalid">
                                   Please provide Image.
                                 </Form.Control.Feedback>

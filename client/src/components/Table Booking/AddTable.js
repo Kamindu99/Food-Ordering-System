@@ -25,7 +25,7 @@ function AddTable() {
             image,
         }
     
-       await axios.post('http://localhost:5000/table/add', newStudent).then((res)=>{
+       await axios.post('https://foodordersystm.onrender.com/table/add', newStudent).then((res)=>{
            alert("Table Added")
             console.log(res.data)
             window.location.href = '/alltable'

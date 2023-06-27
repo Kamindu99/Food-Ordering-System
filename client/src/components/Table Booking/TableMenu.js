@@ -18,7 +18,7 @@ function TableMenu() {
 
     useEffect (() => {
       setIsLoading(true);
-           axios.get('http://localhost:5000/table/').then(res => {
+           axios.get('https://foodordersystm.onrender.com/table/').then(res => {
 
                setTables(res.data)
                console.log(res.data)
@@ -38,7 +38,7 @@ function TableMenu() {
         console.log(searchkey)
 
         const response = await axios.get(
-            'http://localhost:5000/table/'
+            'https://foodordersystm.onrender.com/table/'
           );
         const  filteredPackages = response.data.filter((tables) =>
           tables.name.toLowerCase().includes(searchkey)
@@ -72,7 +72,7 @@ function TableMenu() {
     setsearchkey('');
     
 
-    axios.get('http://localhost:5000/table/').then(res => {
+    axios.get('https://foodordersystm.onrender.com/table/').then(res => {
                setTables(res.data)
                console.log(res.data)
 

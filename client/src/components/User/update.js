@@ -36,7 +36,7 @@ import {  useEffect } from "react";
         const abc = {token:result}
         
         
-        axios.post('http://localhost:5000/register/view', abc).then(res=>{
+        axios.post('https://foodordersystm.onrender.com/register/view', abc).then(res=>{
            
             
                 setId   (res.data.userId)
@@ -62,7 +62,7 @@ import {  useEffect } from "react";
 
         console.log(update)
 
-        axios.put('http://localhost:5000/register/update', update).then(res=>{
+        axios.put('https://foodordersystm.onrender.com/register/update', update).then(res=>{
            
             alert("Update Success")
         

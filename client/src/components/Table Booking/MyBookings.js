@@ -30,14 +30,14 @@ function MyBookings() {
         const abc = {token:result}
         
         
-        axios.post('http://localhost:5000/register/view', abc).then(res=>{
+        axios.post('https://foodordersystm.onrender.com/register/view', abc).then(res=>{
            
             
                 setId(res.data.userId)
                 console.log(res.data.userId)
                 const ids = res.data.userId
         
-        axios.get(`http://localhost:5000/tablebooking/book/${ids}`).then(res => {
+        axios.get(`https://foodordersystm.onrender.com/tablebooking/book/${ids}`).then(res => {
          
          if(res.data.length != 0){
               setBookings(res.data)
@@ -71,7 +71,7 @@ function MyBookings() {
 
         const tableId = e.target.id;
 
-        axios.delete(`http://localhost:5000/tablebooking/${tableId}`).then((res) => {
+        axios.delete(`https://foodordersystm.onrender.com/tablebooking/${tableId}`).then((res) => {
             console.log(res.data)
             alert('Booking Deleted')
             window.location.reload();

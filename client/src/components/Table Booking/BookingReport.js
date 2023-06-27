@@ -9,7 +9,7 @@ function BookingReport() {
     const componentRef = useRef();
     
     useEffect(() => {
-        axios.get('http://localhost:5000/tablebooking/').then(res => {
+        axios.get('https://foodordersystm.onrender.com/tablebooking/').then(res => {
          setBookings(res.data)
             console.log(res.data)
 
