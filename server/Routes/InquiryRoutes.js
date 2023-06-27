@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Inquiry = require('../models/inquiryModel')
+const Inquiry = require('../Models/inquiryModel')
 
 router.post('/add', async (req, res) => {
   try {

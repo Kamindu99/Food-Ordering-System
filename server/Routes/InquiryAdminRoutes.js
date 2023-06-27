@@ -1,5 +1,5 @@
 const express = require('express');
-const inquiryadmin = require('../models/InquiryAdminModel');
+const inquiryadmin = require('../Models/InquiryAdminModel');
 
 const router = express.Router();
 
